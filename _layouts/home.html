@@ -1,0 +1,13 @@
+{% for post in site.posts%}
+<li><a href="{{post.url}}" target="_blank">{{post.title}}</a></li>
+{% endfor %}
+
+{% for post in site.pages%}
+<li><a href="{{post.url}}" target="_blank">{{post.title}}</a></li>
+{% endfor %}
+
+{{ site.data.people}}
+
+{% for person in site.data.people %} <br>
+    {{ person.name}}, {{person.occupation}}<br>
+{% endfor %}

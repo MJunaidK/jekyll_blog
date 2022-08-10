@@ -1,0 +1,20 @@
+---
+layout: "wrapper"
+---
+
+{% if page.title == "Welcome to Jekyll!" %}
+    This is the first post
+{% elsif page.title == "Welcome to Jekyll! Again" %}
+    This is the Second post
+{% else %}
+    This is another post    
+{% endif %}    
+
+{% for post  in site.posts %}
+    <li><a style="{% if page.url == post.url %}color:red;{% endif %}" href="{{post.url}}">{{post.title}}</a></li>
+{% endfor %}
+
+<h1>This is a Post<h1>
+<hr>
+
+{{ content }}
